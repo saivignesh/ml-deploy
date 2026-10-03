@@ -18,6 +18,11 @@ class ModelResponse(BaseModel):
     confidence: float | None = None
 
 
+@app.get("/")
+def welcome():
+    return {"message": "Welcome to review sentiment prediction."}
+
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
